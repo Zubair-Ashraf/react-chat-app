@@ -45,71 +45,69 @@ export default function Register(props) {
     setValues({ ...values, [name]: value });
   };
   return (
-    <div>
-      <Row className="bg-white p-5 justify-content-center">
-        <Col md={6}>
-          <h1 className="text-center my-5">Register</h1>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group>
-              <Form.Label className={errors.username && "text-danger"}>
-                {errors.username ?? "Username"}
-              </Form.Label>
-              <Form.Control
-                name="username"
-                type="text"
-                className={errors.username && "is-invalid"}
-                value={values.username}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label className={errors.email && "text-danger"}>
-                {errors.email ?? "Email Address"}
-              </Form.Label>
-              <Form.Control
-                name="email"
-                type="email"
-                className={errors.email && "is-invalid"}
-                value={values.email}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label className={errors.password && "text-danger"}>
-                {errors.password ?? "Password"}
-              </Form.Label>
-              <Form.Control
-                name="password"
-                type="password"
-                className={errors.password && "is-invalid"}
-                value={values.password}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label className={errors.confirmPassword && "text-danger"}>
-                {errors.confirmPassword ?? "Confirm Password"}
-              </Form.Label>
-              <Form.Control
-                name="confirmPassword"
-                type="password"
-                className={errors.confirmPassword && "is-invalid"}
-                value={values.confirmPassword}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <div className="text-center">
-              <Button variant="success" type="submit" disabled={loading}>
-                {loading ? "Loading" : "Register"}
-              </Button>
-              <br />
-              <small className="mt-4">
-                Already have an account <Link to="/login">Login</Link>
-              </small>
-            </div>
-          </Form>
-        </Col>
-      </Row>
-    </div>
+    <Row className="bg-white p-5 justify-content-center">
+      <Col md={6}>
+        <h1 className="text-center">Register</h1>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group>
+            <Form.Label className={errors.username && "text-danger"}>
+              {errors.username ?? "Username"}
+            </Form.Label>
+            <Form.Control
+              name="username"
+              type="text"
+              className={errors.username && "is-invalid"}
+              value={values.username}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label className={errors.email && "text-danger"}>
+              {errors.email ?? "Email Address"}
+            </Form.Label>
+            <Form.Control
+              name="email"
+              type="email"
+              className={errors.email && "is-invalid"}
+              value={values.email}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label className={errors.password && "text-danger"}>
+              {errors.password ?? "Password"}
+            </Form.Label>
+            <Form.Control
+              name="password"
+              type="password"
+              className={errors.password && "is-invalid"}
+              value={values.password}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label className={errors.confirmPassword && "text-danger"}>
+              {errors.confirmPassword ?? "Confirm Password"}
+            </Form.Label>
+            <Form.Control
+              name="confirmPassword"
+              type="password"
+              className={errors.confirmPassword && "is-invalid"}
+              value={values.confirmPassword}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <div className="text-center">
+            <Button variant="success" type="submit" disabled={loading}>
+              {loading ? "Loading" : "Register"}
+            </Button>
+            <br />
+            <small className="mt-4">
+              Already have an account <Link to="/login">Login</Link>
+            </small>
+          </div>
+        </Form>
+      </Col>
+    </Row>
   );
 }

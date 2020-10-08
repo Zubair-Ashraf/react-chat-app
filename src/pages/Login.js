@@ -45,7 +45,7 @@ export default function Login(props) {
     <div>
       <Row className="bg-white p-5 justify-content-center">
         <Col md={6}>
-          <h1 className="text-center my-5">Login</h1>
+          <h1 className="text-center">Login</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label className={errors.username && "text-danger"}>
