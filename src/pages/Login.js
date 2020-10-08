@@ -10,7 +10,6 @@ const LOGIN_USER = gql`
       username
       email
       token
-      createdAt
     }
   }
 `;
