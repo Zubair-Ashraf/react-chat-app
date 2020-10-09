@@ -35,7 +35,7 @@ export default function Users() {
 
   if (!users || loading) {
     usersMarkup = <p>Loading...</p>;
-  } else if (users.lenght === 0) {
+  } else if (users.length === 0) {
     usersMarkup = <p>No user have joined</p>;
   } else if (users.length > 0) {
     usersMarkup = users.map((user) => {
